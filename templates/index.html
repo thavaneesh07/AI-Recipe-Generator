@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Recipe Generator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>🍳 AI Recipe Generator</h1>
+    <p class="subtitle">Create recipes from ingredients using AI</p>
+
+    <div class="card">
+      <textarea
+        id="ingredients"
+        placeholder="Enter ingredients (e.g. rice, tomato, onion)">
+      </textarea>
+
+      <select id="cuisine">
+        <option value="Any">Any</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Thai">Thai</option>
+        <option value="Mediterranean">Mediterranean</option>
+        <option value="American">American</option>
+        <option value="Korean">Korean</option>
+        <option value="French">French</option>
+      </select>
+
+      <button onclick="generateRecipe()">Generate Recipe</button>
+    </div>
+
+    <!-- Generated Recipe -->
+    <div class="result-card">
+      <div class="image-wrapper">
+        <img src="/static/images/food.jpg" alt="">
+      </div>
+      <pre id="result">Your recipe will appear here...</pre>
+    </div>
+
+    <!-- Recent Recipes -->
+    <h2 class="section-title">📜 Recent Recipes</h2>
+    <div id="history" class="history"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
